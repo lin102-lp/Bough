@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-zinc-100 text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+    font-family:
+      Inter, system-ui, -apple-system, "Segoe UI", "Noto Sans CJK SC", "Source Han Sans SC",
+      "Microsoft YaHei", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-zinc-300 dark:bg-zinc-700;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex select-none items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-2.5 py-1.5
+      text-xs font-medium text-zinc-700 shadow-sm transition
+      hover:bg-zinc-50 active:scale-[.98]
+      disabled:cursor-not-allowed disabled:opacity-50
+      dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800;
+  }
+
+  .btn-primary {
+    @apply border-brand-600 bg-brand-600 text-white hover:bg-brand-500 dark:border-brand-500 dark:bg-brand-600 dark:hover:bg-brand-500;
+  }
+
+  .btn-ghost {
+    @apply border-transparent bg-transparent shadow-none hover:bg-zinc-100 dark:hover:bg-zinc-800;
+  }
+
+  .btn-danger {
+    @apply border-rose-200 text-rose-600 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-300 dark:hover:bg-rose-950;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-sm text-zinc-800
+      placeholder:text-zinc-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20
+      dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100;
+  }
+
+  .textarea {
+    @apply w-full resize-none rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 font-mono text-[13px]
+      leading-relaxed text-zinc-800 placeholder:text-zinc-400
+      focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20
+      dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100;
+  }
+
+  .label {
+    @apply mb-1 block text-[11px] font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] font-medium leading-none;
+  }
+
+  .panel {
+    @apply border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900;
+  }
+
+  .chip {
+    @apply inline-flex cursor-pointer select-none items-center gap-1 rounded-full border px-2 py-0.5 text-[11px]
+      transition hover:border-brand-400;
+  }
+
+  .section-title {
+    @apply flex items-center justify-between px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400;
+  }
+}
+
+/* ---------------- React Flow 定制 ---------------- */
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__handle {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  background: #a1a1aa;
+}
+
+.dark .react-flow__handle {
+  border-color: #18181b;
+  background: #71717a;
+}
+
+.react-flow__handle:hover {
+  background: #6366f1;
+}
+
+.react-flow__node {
+  font-size: 12px;
+}
+
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:focus .react-flow__edge-path {
+  stroke: #6366f1 !important;
+  stroke-width: 2.4 !important;
+}
+
+.react-flow__controls button {
+  border-bottom: 1px solid rgb(228 228 231);
+}
+
+.dark .react-flow__controls button {
+  background: #18181b;
+  color: #e4e4e7;
+  border-bottom-color: #3f3f46;
+}
+
+.dark .react-flow__minimap {
+  background: #18181b;
+}

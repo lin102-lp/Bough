@@ -1,0 +1,6 @@
+# pnpm 工作区配置
+#
+# 说明：pnpm 10+ 默认禁止依赖执行安装脚本（供应链安全）。
+# esbuild 需要执行安装脚本来准备平台二进制，这里显式放行。
+onlyBuiltDependencies:
+  - esbuild

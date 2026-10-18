@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "TimeTree 主窗口默认权限：仅开放 core 基础能力，所有业务逻辑走自定义命令",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=树状时间笔记 TimeTree
+Name[en]=TimeTree
+GenericName=时间树笔记
+GenericName[en]=Time tree notes
+Comment=同天为图，跨天为树：节点可延续、重现、局部编辑，边可一键复制到明天
+Comment[en]=Graph per day, tree across days
+Exec=timetree %U
+Icon=timetree
+Terminal=false
+StartupNotify=true
+StartupWMClass=TimeTree
+Categories=Office;
+Keywords=note;notes;diary;journal;tree;timeline;markdown;
+Keywords[zh_CN]=笔记;日记;时间树;大纲;待办;
